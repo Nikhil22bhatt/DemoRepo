@@ -1,17 +1,9 @@
-{
-  "plugins": [
+"plugins": [
     {
       "id": "aem-genai-variations",
-      "titleI18n": {
-        "en": "Generate with AI"
-      },
-      "environments": [
-        "preview"
-      ],
-      "includePaths": [
-        "**.docx**"
-      ],
+      "title": "Generate Variations",
+      "environments": ["preview", "live", "edit"],
+      "includePaths": ["**.docx**", "**.md**", "https://docs.google.com/**"],
       "event": "aem-genai-variations-sidekick"
     }
   ]
-}
