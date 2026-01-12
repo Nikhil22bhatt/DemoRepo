@@ -1,7 +1,7 @@
 {
   "project": "SecurBank",
   "editUrlLabel": "AEM Editor",
-  "host": "www.securbankdemo.com",
+  "host": "main--demorepo--nikhil22bhatt.aem.live", 
   "editUrlPattern": "{{contentSourceUrl}}{{pathname}}?cmd=open",
   "plugins": [
     {
