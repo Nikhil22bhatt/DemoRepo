@@ -6,7 +6,8 @@
       "title": "Generate Variations",
       "environments": [ "preview", "live", "edit" ],
       "includePaths": [ "**.docx**", "**.md**", "https://docs.google.com/**" ],
-      "event": "aem-genai-variations-sidekick"
+      "event": "aem-genai-variations-sidekick",
+      "passConfig": true
     }
   ]
 }
