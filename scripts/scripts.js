@@ -204,8 +204,6 @@ async function loadLazy(doc) {
 
   sampleRUM('lazy');
 
-  import('../tools/sidekick/aem-genai-variations.js');
-
 
   // Add below snippet at the end of the lazy phase
   if ((getMetadata('experiment')
