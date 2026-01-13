@@ -1,6 +1,6 @@
-  mountpoints:
+mountpoints:
   /:
     url: https://drive.google.com/drive/folders/1GqjFlNXiUI-jJ7kC3kvgy5f_vcb1ykTm
-
   /assets:
     url: https://author-p178403-e1883757.adobeaemcloud.com/content/dam
+
