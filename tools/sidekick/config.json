@@ -9,16 +9,16 @@
       "url": "/tools/sidekick/library.html",
       "includePaths": [ "**.docx**" ]
     },
-    {
-      "id": "asset-library",
-      "title": "My Assets",
-      "environments": [ "edit" ],
-      "url": "https://experience.adobe.com/solutions/CQ-assets-selectors/static-assets/resources/franklin/asset-selector.html",
-      "isPalette": true,
-      "passConfig": true,
-      "includePaths": [ "**.docx**", "**.md**", "https://docs.google.com/**" ],
-      "paletteRect": "top: 50px; bottom: 10px; right: 10px; left: auto; width:400px; height: calc(100vh - 60px)"
-    },
+   {
+  "id": "asset-library",
+  "title": "My Assets",
+  "environments": [ "edit" ],
+  "url": "https://experience.adobe.com/solutions/CQ-assets-selectors/static-assets/resources/franklin/asset-selector.html",
+  "isPalette": true,
+  "passConfig": true,
+  "includePaths": [ "**.docx**", "https://docs.google.com/**" ],
+  "paletteRect": "top: 50px; bottom: 10px; right: 10px; left: auto; width:400px; height: calc(100vh - 60px)"
+},
     {
       "id": "generate-variations",
       "title": "Generate Variations",
