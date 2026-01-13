@@ -207,7 +207,7 @@ main img {
 /* stylelint-disable-next-line selector-class-pattern */
 .icon-securbank_logo {
   width: 128px;
-  height: 48px;
+  height: auto;
 }
 
 @media (width >= 900px) {
