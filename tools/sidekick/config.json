@@ -1,6 +1,6 @@
 {
     "project": "Demo Bank",
-    "host": "main--demorepo--nikhil22bhatt.aem.page",
+    "host": "main--demorepo--nikhil22bhatt.aem.live",
     "plugins": [
         {
             "id": "library",
