@@ -1,33 +1,32 @@
 {
-    "project": "Demo",
-    "host": "main--demorepo--nikhil22bhatt.aem.live",
-    "plugins": [
-        {
-            "id": "library",
-            "title": "Library",
-            "environments": ["edit"],
-            "url": "/tools/sidekick/library.html",
-            "includePaths": ["**.docx**"]
-          },
-        {
-            "id": "asset-library",
-            "title": "My Assets",
-            "environments": [
-                            "edit"
-             ],
-              "url": "https://experience.adobe.com/solutions/CQ-assets-selectors/static-assets/resources/franklin/asset-selector.html",
-              "isPalette": true,
-              "includePaths": [ "**.docx**" ],
-              "paletteRect": "top: 50px; bottom: 10px; right: 10px; left: auto; width:400px; height: calc(100vh - 60px)"
-        },
-        {
-              "id": "generate-variations",
-              "title": "Generate Variations",
-              "url": "https://experience.adobe.com/aem/generate-variations",
-              "passConfig": true,
-              "environments": ["preview","live", "edit"],
-              "includePaths": ["**.docx**"]
-        }
-    ]
-    
+  "project": "Demo",
+  "host": "main--demorepo--nikhil22bhatt.aem.live",
+  "plugins": [
+    {
+      "id": "library",
+      "title": "Library",
+      "environments": [ "edit" ],
+      "url": "/tools/sidekick/library.html",
+      "includePaths": [ "**.docx**" ]
+    },
+    {
+      "id": "asset-library",
+      "title": "My Assets",
+      "environments": [ "edit" ],
+      "url": "https://experience.adobe.com/solutions/CQ-assets-selectors/static-assets/resources/franklin/asset-selector.html",
+      "isPalette": true,
+      "passConfig": true, 
+      "includePaths": [ "**.docx**", "**.md**", "https://docs.google.com/**" ],
+      "paletteRect": "top: 50px; bottom: 10px; right: 10px; left: auto; width:400px; height: calc(100vh - 60px)"
+    },
+    {
+      "id": "generate-variations",
+      "title": "Generate Variations",
+      "url": "https://experience.adobe.com/aem/generate-variations",
+      "passConfig": true,
+      "environments": [ "preview", "live", "edit" ],
+      "includePaths": [ "**.docx**", "**.md**", "https://docs.google.com/**" ],
+      "event": "aem-genai-variations-sidekick"
+    }
+  ]
 }
