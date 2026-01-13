@@ -2,13 +2,9 @@
     "project": "Demo1",
     "host": "main--demorepo--nikhil22bhatt.aem.page",
     "plugins": [
-        {
-            "id": "library1",
-            "title": "Library1",
-            "environments": ["edit"],
-            "url": "/tools/sidekick/library.html",
-            "includePaths": ["**.docx**"]
-          },
+        
+
+          
         {
             "id": "asset-library",
             "title": "My Assets",
