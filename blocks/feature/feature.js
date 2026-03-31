@@ -1,5 +1,26 @@
 import { fetchPlaceholders } from '../../scripts/aem.js';
 
+function addFallbackFeatureLink(container) {
+  const actionParagraphs = [...container.querySelectorAll(':scope > p')];
+  const actionParagraph = actionParagraphs[actionParagraphs.length - 1];
+  if (!actionParagraph || actionParagraph.querySelector('a')) return;
+
+  const headingText = container.querySelector('h3')?.textContent?.trim() || '';
+  if (!/the best rate/i.test(headingText)) return;
+
+  const label = actionParagraph.textContent.trim();
+  if (!label) return;
+
+  const link = document.createElement('a');
+  link.href = '/accounts';
+  link.title = label;
+  link.textContent = label;
+  link.className = 'button';
+
+  actionParagraph.textContent = '';
+  actionParagraph.append(link);
+}
+
 export default async function decorate(block) {
   const mediaWrapper = document.createElement('div');
   mediaWrapper.classList.add('feature-content-media');
@@ -17,6 +38,7 @@ export default async function decorate(block) {
   callOutWrapper.classList.add('feature-callout-wrapper');
   /* eslint prefer-destructuring: ["error", {VariableDeclarator: {object: true}}] */
   row = block.getElementsByTagName('div')[4];
+  addFallbackFeatureLink(row);
   const placeholders = await fetchPlaceholders('');
   const { interestrate } = placeholders;
   const interest = document.createElement('p');
