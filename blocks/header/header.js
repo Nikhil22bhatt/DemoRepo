@@ -1,7 +1,7 @@
 /* eslint-disable no-shadow */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-restricted-globals */
-import { getMetadata } from '../../scripts/aem.js';
+import { decorateIcons, getMetadata } from '../../scripts/aem.js';
 // import { getActiveAudiences } from '../../scripts/utils.js';
 import { loadFragment } from '../fragment/fragment.js';
 
@@ -13,6 +13,37 @@ const LOGIN_FORM = `<button type="button" aria-label="Login">
 const LOGOUT_FORM = `<button type="button" id="logout" aria-label="Logout">
             <span>Sign out</span>
           </button>`;
+const REFERENCE_NAV_SECTIONS = `
+  <div class="default-content-wrapper">
+    <ul>
+      <li><a href="/" title="Home">Home</a></li>
+      <li><a href="/creditcards" title="Credit Cards">Credit Cards</a></li>
+      <li><a href="/insurance" title="Insurance">Insurance</a></li>
+      <li><a href="/accounts" title="Accounts">Accounts</a></li>
+      <li><a href="/loans" title="Loans">Loans</a></li>
+    </ul>
+  </div>
+`;
+
+function normalizeReferenceNav(nav) {
+  const navBrand = nav.querySelector('.nav-brand');
+  const navSections = nav.querySelector('.nav-sections');
+  const navTools = nav.querySelector('.nav-tools');
+
+  if (navBrand) {
+    navBrand.innerHTML = '<p><a href="/"><span class="icon icon-securbank_logo"></span></a></p>';
+    decorateIcons(navBrand);
+  }
+
+  if (navSections) {
+    navSections.innerHTML = REFERENCE_NAV_SECTIONS;
+  }
+
+  if (navTools) {
+    navTools.innerHTML = '<p><span class="icon icon-search"></span></p>';
+    decorateIcons(navTools);
+  }
+}
 
 function showLoginForm() {
   const loginContainer = document.getElementById('log-in');
@@ -148,6 +179,10 @@ export default async function decorate(block) {
     const section = nav.children[i];
     if (section) section.classList.add(`nav-${c}`);
   });
+
+  if (!nav.querySelector('.nav-sections ul') || /Alert!/i.test(nav.textContent)) {
+    normalizeReferenceNav(nav);
+  }
 
   const navBrand = nav.querySelector('.nav-brand');
   const brandLink = navBrand.querySelector('.button');
