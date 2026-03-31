@@ -1,11 +1,9 @@
 {
   "project": "Demo Bank",
-  "host": "main--demorepo--nikhil22bhatt.aem.live",
   "plugins": [
     {
       "id": "library",
-      "title": "Library",
-      "pinned": true,
+      "title": "Sidekick Library",
       "environments": ["edit"],
       "url": "/tools/sidekick/library.html",
       "excludePaths": ["**"],
@@ -13,23 +11,21 @@
     },
     {
       "id": "asset-library",
-      "title": "My Assets",
-      "pinned": true,
+      "title": "AEM Assets",
       "environments": ["edit"],
       "url": "https://experience.adobe.com/solutions/CQ-helix-assets-addon/static-assets/resources/asset-selector.html",
       "isPalette": true,
       "passConfig": true,
-      "excludePaths": ["**"],
       "includePaths": ["**.docx**", "/document/**"],
       "paletteRect": "top: 50px; bottom: 10px; right: 10px; left: auto; width:400px; height: calc(100vh - 60px)"
     },
     {
       "id": "generate-variations",
-      "title": "Generate",
-      "pinned": true,
+      "title": "Generate Variations",
       "url": "https://experience.adobe.com/aem/generate-variations",
       "passConfig": true,
-      "environments": ["preview", "live", "edit"]
+      "environments": ["preview", "live", "edit"],
+      "includePaths": ["**.docx**", "/document/**"]
     }
   ]
 }
