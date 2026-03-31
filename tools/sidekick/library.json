@@ -10,19 +10,19 @@
   "data": [
     {
       "name": "Hero",
-      "path": "/tools/sidekick/blocks/hero"
+      "path": "/tools/sidekick/blocks/hero.html"
     },
     {
       "name": "Cards",
-      "path": "/tools/sidekick/blocks/cards"
+      "path": "/tools/sidekick/blocks/cards.html"
     },
     {
       "name": "Columns",
-      "path": "/tools/sidekick/blocks/columns"
+      "path": "/tools/sidekick/blocks/columns.html"
     },
     {
       "name": "Feature",
-      "path": "/tools/sidekick/blocks/feature"
+      "path": "/tools/sidekick/blocks/feature.html"
     }
   ]
 }
