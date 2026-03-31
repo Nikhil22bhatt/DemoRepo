@@ -1,0 +1,28 @@
+{
+  "total": 4,
+  "offset": 0,
+  "limit": 4,
+  ":type": "sheet",
+  ":names": [
+    "name",
+    "path"
+  ],
+  "data": [
+    {
+      "name": "Hero",
+      "path": "/tools/sidekick/blocks/hero"
+    },
+    {
+      "name": "Cards",
+      "path": "/tools/sidekick/blocks/cards"
+    },
+    {
+      "name": "Columns",
+      "path": "/tools/sidekick/blocks/columns"
+    },
+    {
+      "name": "Feature",
+      "path": "/tools/sidekick/blocks/feature"
+    }
+  ]
+}
